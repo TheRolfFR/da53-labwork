@@ -1,0 +1,35 @@
+02.1
+
+What is the alphabet of the language?
+Any alpha numeric and some special characters
+a-z
+A-Z
+0-9
+<
+>
+,
++
+-
+*
+/
+
+What are the lexemes (as regular expressions) of the language ?
+[a-zA-Z0-9<>,+-*/]
+
+Write the table that is matching the lexemes, the tokens, and the attributes of the tokens.
+
+token -> Regular expression
+PRINT -> [Pp][Rr][Ii][Nn][Tt] // not case sensitive
+IF -> /IF/i
+THEN -> /THEN/i
+REL_OP -> (=|<=?|>=?|<>|><)// Opérateurs relationnels
+GOTO -> /GOTO/i
+NUM -> [+-]?[0-9]*(\.[0-9]+(e[0-9]+)?)? // nombre avec signe optionnel et partie décimale optionelle donc partie exponentielle optionnelle
+ID => [_a-zA-Z0-9][_a-zA-Z0-9]*
+LET => /LET/i
+INPUT => /INPUT/i
+GOSUB => /GOSUB/i
+RETURN => /RETURN/i
+END => /END/i
+MATH_OP => /[+/*-]/
+REM => /REM.*\n/
